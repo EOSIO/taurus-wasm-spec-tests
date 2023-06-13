@@ -1,6 +1,6 @@
 #include <wasm_spec_tests.hpp>
 
-const string wasm_str_traps_0 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/traps.0.wasm";
+const string wasm_str_traps_0 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/traps.0.wasm";
 std::vector<uint8_t> wasm_traps_0= read_wasm(wasm_str_traps_0.c_str());
 
 BOOST_DATA_TEST_CASE(traps_0_check_throw, boost::unit_test::data::xrange(0,6), index) { try {
@@ -20,7 +20,7 @@ BOOST_DATA_TEST_CASE(traps_0_check_throw, boost::unit_test::data::xrange(0,6), i
    tester.produce_block();
 } FC_LOG_AND_RETHROW() }
 
-const string wasm_str_traps_1 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/traps.1.wasm";
+const string wasm_str_traps_1 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/traps.1.wasm";
 std::vector<uint8_t> wasm_traps_1= read_wasm(wasm_str_traps_1.c_str());
 
 BOOST_DATA_TEST_CASE(traps_1_check_throw, boost::unit_test::data::xrange(0,4), index) { try {
@@ -40,7 +40,7 @@ BOOST_DATA_TEST_CASE(traps_1_check_throw, boost::unit_test::data::xrange(0,4), i
    tester.produce_block();
 } FC_LOG_AND_RETHROW() }
 
-const string wasm_str_traps_2 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/traps.2.wasm";
+const string wasm_str_traps_2 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/traps.2.wasm";
 std::vector<uint8_t> wasm_traps_2= read_wasm(wasm_str_traps_2.c_str());
 
 BOOST_DATA_TEST_CASE(traps_2_check_throw, boost::unit_test::data::xrange(0,8), index) { try {
@@ -60,7 +60,7 @@ BOOST_DATA_TEST_CASE(traps_2_check_throw, boost::unit_test::data::xrange(0,8), i
    tester.produce_block();
 } FC_LOG_AND_RETHROW() }
 
-const string wasm_str_traps_3 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/traps.3.wasm";
+const string wasm_str_traps_3 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/traps.3.wasm";
 std::vector<uint8_t> wasm_traps_3= read_wasm(wasm_str_traps_3.c_str());
 
 BOOST_DATA_TEST_CASE(traps_3_check_throw, boost::unit_test::data::xrange(0,14), index) { try {

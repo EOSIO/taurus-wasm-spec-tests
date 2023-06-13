@@ -29,4 +29,5 @@ inline void push_action(TESTER& tester, action&& act, uint64_t authorizer) {
 }
 
 const string base_dir = "${CMAKE_SOURCE_DIR}";
+const string WASM_SPEC_TESTS_DIR = "${WASM_SPEC_TESTS_DIR}";
 

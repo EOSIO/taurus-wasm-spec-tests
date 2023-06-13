@@ -1,6 +1,6 @@
-# EOSIO WASM Spec Tests
+# EOSIO-Taurus WASM Spec Tests
 
-This repo provides a set of EOSIO unit tests that can be used to check a WASM Backend's conformance to the
+This repo provides a set of EOSIO-Taurus unit tests that can be used to check a WASM Backend's conformance to the
 WebAssembly spec.
 
 ## Tests
@@ -43,7 +43,7 @@ WebAssembly spec.
     - Unclear how to hand alter this to have memory properly zeroed where expected.
 
 - start.7 -- Will fail if not deleted from generated tests.
-    - Imports "print" from "spectest". Changing to any of the EOSIO print functions results in "start function must be nullary" due to their requiring a parameter.
+    - Imports "print" from "spectest". Changing to any of the EOSIO-Taurus print functions results in "start function must be nullary" due to their requiring a parameter.
 
 - globals.2 -- Delete from generated tests or it segfaults due to missing wasm.
     - `eosio-wasm2wast` error "mutable globals cannot be exported" when converting to wast.
@@ -53,14 +53,7 @@ WebAssembly spec.
         - `wasm2wat` provided by WABT handles this correctly, implying an error in CDT.
 - globals.14 -- Delete from generated tests or it segfaults due to missing wasm.
     - Imports "global_i32" from "spectest".
-        - Unclear what an appropriate substition from EOSIO would be.
-
-
-## Contributing
-
-[Contributing Guide](./CONTRIBUTING.md)
-
-[Code of Conduct](./CONTRIBUTING.md#conduct)
+        - Unclear what an appropriate substition from EOSIO-Taurus would be.
 
 ## License
 
@@ -70,4 +63,4 @@ WebAssembly spec.
 
 See [LICENSE](./LICENSE) for copyright and license terms.
 
-All repositories and other materials are provided subject to the terms of this [IMPORTANT](./IMPORTANT.md) notice and you must familiarize yourself with its terms.  The notice contains important information, limitations and restrictions relating to our software, publications, trademarks, third-party resources, and forward-looking statements.  By accessing any of our repositories and other materials, you accept and agree to the terms of the notice.
+All repositories and other materials are provided subject to the terms of this [IMPORTANT](https://github.com/EOSIO/taurus-node/blob/develop/IMPORTANT.md) notice and you must familiarize yourself with its terms.  The notice contains important information, limitations and restrictions relating to our software, publications, trademarks, third-party resources, and forward-looking statements.  By accessing any of our repositories and other materials, you accept and agree to the terms of the notice.

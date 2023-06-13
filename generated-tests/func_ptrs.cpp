@@ -1,6 +1,6 @@
 #include <wasm_spec_tests.hpp>
 
-const string wasm_str_func_ptrs_0 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/func_ptrs.0.wasm";
+const string wasm_str_func_ptrs_0 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/func_ptrs.0.wasm";
 std::vector<uint8_t> wasm_func_ptrs_0= read_wasm(wasm_str_func_ptrs_0.c_str());
 
 BOOST_DATA_TEST_CASE(func_ptrs_0_pass, boost::unit_test::data::xrange(0,1), index) { try {
@@ -21,7 +21,7 @@ BOOST_DATA_TEST_CASE(func_ptrs_0_pass, boost::unit_test::data::xrange(0,1), inde
    BOOST_REQUIRE_EQUAL( tester.validate(), true );
 } FC_LOG_AND_RETHROW() }
 
-const string wasm_str_func_ptrs_8 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/func_ptrs.8.wasm";
+const string wasm_str_func_ptrs_8 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/func_ptrs.8.wasm";
 std::vector<uint8_t> wasm_func_ptrs_8= read_wasm(wasm_str_func_ptrs_8.c_str());
 
 BOOST_DATA_TEST_CASE(func_ptrs_8_check_throw, boost::unit_test::data::xrange(0,6), index) { try {
@@ -59,7 +59,7 @@ BOOST_DATA_TEST_CASE(func_ptrs_8_pass, boost::unit_test::data::xrange(6,7), inde
    BOOST_REQUIRE_EQUAL( tester.validate(), true );
 } FC_LOG_AND_RETHROW() }
 
-const string wasm_str_func_ptrs_9 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/func_ptrs.9.wasm";
+const string wasm_str_func_ptrs_9 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/func_ptrs.9.wasm";
 std::vector<uint8_t> wasm_func_ptrs_9= read_wasm(wasm_str_func_ptrs_9.c_str());
 
 BOOST_DATA_TEST_CASE(func_ptrs_9_pass, boost::unit_test::data::xrange(0,1), index) { try {

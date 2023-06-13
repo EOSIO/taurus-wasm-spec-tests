@@ -1,6 +1,6 @@
 #include <wasm_spec_tests.hpp>
 
-const string wasm_str_address_0 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/address.0.wasm";
+const string wasm_str_address_0 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/address.0.wasm";
 std::vector<uint8_t> wasm_address_0= read_wasm(wasm_str_address_0.c_str());
 
 BOOST_DATA_TEST_CASE(address_0_check_throw, boost::unit_test::data::xrange(0,11), index) { try {
@@ -38,7 +38,7 @@ BOOST_DATA_TEST_CASE(address_0_pass, boost::unit_test::data::xrange(11,12), inde
    BOOST_REQUIRE_EQUAL( tester.validate(), true );
 } FC_LOG_AND_RETHROW() }
 
-const string wasm_str_address_2 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/address.2.wasm";
+const string wasm_str_address_2 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/address.2.wasm";
 std::vector<uint8_t> wasm_address_2= read_wasm(wasm_str_address_2.c_str());
 
 BOOST_DATA_TEST_CASE(address_2_check_throw, boost::unit_test::data::xrange(0,15), index) { try {
@@ -76,7 +76,7 @@ BOOST_DATA_TEST_CASE(address_2_pass, boost::unit_test::data::xrange(15,17), inde
    BOOST_REQUIRE_EQUAL( tester.validate(), true );
 } FC_LOG_AND_RETHROW() }
 
-const string wasm_str_address_3 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/address.3.wasm";
+const string wasm_str_address_3 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/address.3.wasm";
 std::vector<uint8_t> wasm_address_3= read_wasm(wasm_str_address_3.c_str());
 
 BOOST_DATA_TEST_CASE(address_3_check_throw, boost::unit_test::data::xrange(0,3), index) { try {
@@ -114,7 +114,7 @@ BOOST_DATA_TEST_CASE(address_3_pass, boost::unit_test::data::xrange(3,4), index)
    BOOST_REQUIRE_EQUAL( tester.validate(), true );
 } FC_LOG_AND_RETHROW() }
 
-const string wasm_str_address_4 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/address.4.wasm";
+const string wasm_str_address_4 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/address.4.wasm";
 std::vector<uint8_t> wasm_address_4= read_wasm(wasm_str_address_4.c_str());
 
 BOOST_DATA_TEST_CASE(address_4_check_throw, boost::unit_test::data::xrange(0,3), index) { try {

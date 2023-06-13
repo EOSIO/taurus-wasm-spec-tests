@@ -1,6 +1,6 @@
 #include <wasm_spec_tests.hpp>
 
-const string wasm_str_unreachable_0 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/unreachable.0.wasm";
+const string wasm_str_unreachable_0 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/unreachable.0.wasm";
 std::vector<uint8_t> wasm_unreachable_0= read_wasm(wasm_str_unreachable_0.c_str());
 
 BOOST_DATA_TEST_CASE(unreachable_0_check_throw, boost::unit_test::data::xrange(0,57), index) { try {
