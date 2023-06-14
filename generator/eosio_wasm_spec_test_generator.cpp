@@ -13,16 +13,12 @@ const string test_includes = "#include <wasm_spec_tests.hpp>\n\n";
 const string boost_xrange  = "boost::unit_test::data::xrange";
 
 string convert_to_valid_cpp_identifier(string val) {
-   string ret_val = val;
-   for (int i = 0; i <= val.size(); i++) {
-      if (val[i] == '-' || val[i] == '.') {
-         ret_val[i] = '_';
-      } else {
-         ret_val[i] = val[i];
+   for (char& c: val) {
+      if (c == '-' || c == '.') {
+         c = '_';
       }
    }
-
-   return ret_val;
+   return val;
 }
 
 string create_module_test_case(string test_name, int start_index, int end_index) {
