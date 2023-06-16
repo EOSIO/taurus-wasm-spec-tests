@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 
+const std::string WASM_SPEC_TESTS_DIR="taurus-wasm-spec-tests";
+
 struct spec_test {
    std::string name;
    int         assert_trap_start_index;

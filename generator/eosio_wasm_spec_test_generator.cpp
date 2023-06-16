@@ -13,16 +13,12 @@ const string test_includes = "#include <wasm_spec_tests.hpp>\n\n";
 const string boost_xrange  = "boost::unit_test::data::xrange";
 
 string convert_to_valid_cpp_identifier(string val) {
-   string ret_val = val;
-   for (int i = 0; i <= val.size(); i++) {
-      if (val[i] == '-' || val[i] == '.') {
-         ret_val[i] = '_';
-      } else {
-         ret_val[i] = val[i];
+   for (char& c: val) {
+      if (c == '-' || c == '.') {
+         c = '_';
       }
    }
-
-   return ret_val;
+   return val;
 }
 
 string create_module_test_case(string test_name, int start_index, int end_index) {
@@ -105,7 +101,7 @@ void write_tests(vector<spec_test> tests) {
       bool has_assert_return_tests = t.assert_return_start_index < t.assert_return_end_index;
 
       string name = convert_to_valid_cpp_identifier(t.name);
-      test_ss << "const string wasm_str_" << name << " = base_dir + \"/eosio-wasm-spec-tests/generated-tests/wasms/" << t.name
+      test_ss << "const string wasm_str_" << name << " = base_dir + \"/" << WASM_SPEC_TESTS_DIR << "/generated-tests/wasms/" << t.name
               << ".wasm\";\n";
       test_ss << "std::vector<uint8_t> wasm_" << name << "= read_wasm(wasm_str_" << name << ".c_str());\n\n";
 

@@ -1,6 +1,6 @@
 #include <wasm_spec_tests.hpp>
 
-const string wasm_str_br_if_0 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/br_if.0.wasm";
+const string wasm_str_br_if_0 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/br_if.0.wasm";
 std::vector<uint8_t> wasm_br_if_0= read_wasm(wasm_str_br_if_0.c_str());
 
 BOOST_DATA_TEST_CASE(br_if_0_pass, boost::unit_test::data::xrange(0,1), index) { try {

@@ -1,6 +1,6 @@
 #include <wasm_spec_tests.hpp>
 
-const string wasm_str_globals_0 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/globals.0.wasm";
+const string wasm_str_globals_0 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/globals.0.wasm";
 std::vector<uint8_t> wasm_globals_0= read_wasm(wasm_str_globals_0.c_str());
 
 BOOST_DATA_TEST_CASE(globals_0_check_throw, boost::unit_test::data::xrange(0,1), index) { try {
@@ -38,7 +38,7 @@ BOOST_DATA_TEST_CASE(globals_0_pass, boost::unit_test::data::xrange(1,2), index)
    BOOST_REQUIRE_EQUAL( tester.validate(), true );
 } FC_LOG_AND_RETHROW() }
 
-const string wasm_str_globals_17 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/globals.17.wasm";
+const string wasm_str_globals_17 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/globals.17.wasm";
 std::vector<uint8_t> wasm_globals_17= read_wasm(wasm_str_globals_17.c_str());
 
 BOOST_DATA_TEST_CASE(globals_17_module, boost::unit_test::data::xrange(0,1), index) { try {

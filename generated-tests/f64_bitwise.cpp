@@ -1,6 +1,6 @@
 #include <wasm_spec_tests.hpp>
 
-const string wasm_str_f64_bitwise_0 = base_dir + "/eosio-wasm-spec-tests/generated-tests/wasms/f64_bitwise.0.wasm";
+const string wasm_str_f64_bitwise_0 = base_dir + "/" + WASM_SPEC_TESTS_DIR + "/generated-tests/wasms/f64_bitwise.0.wasm";
 std::vector<uint8_t> wasm_f64_bitwise_0= read_wasm(wasm_str_f64_bitwise_0.c_str());
 
 BOOST_DATA_TEST_CASE(f64_bitwise_0_pass, boost::unit_test::data::xrange(0,4), index) { try {
